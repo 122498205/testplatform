@@ -19,4 +19,8 @@ from personal import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('index/', views.index),
+    path('accounts/login/', views.index),
+    path('manage/', views.manage),
+    path('logout/', views.logout),
+    path('', views.index),
 ]
