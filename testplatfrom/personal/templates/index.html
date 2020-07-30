@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-        {% load static %}
-    <link rel="stylesheet" type="text/css" href = "{% static 'css/bootstrap.min.css' %}">
-    <script src="{% static 'js/bootstrap.min.js' %}"></script>
-</head>
+{% extends "base.html" %}
+{% block base %}
 <body>
 
 
@@ -24,3 +17,4 @@
       </form>
 
     </div> <!-- /container -->
+{% endblock%}

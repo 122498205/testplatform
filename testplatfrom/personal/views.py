@@ -21,12 +21,18 @@ def index(request):
             return render(request, "index.html", {"error": "用户名或密码错误"})
         else:
             auth.login(request, user)
-            return HttpResponseRedirect("/manage/")
+            return HttpResponseRedirect("/project/")
 
 
 @login_required
-def manage(request):
-    return render(request, "manage.html")
+def project_manage(request):
+    return render(request, "projectmanage.html")
+
+
+@login_required
+def module_manage(request):
+    return render(request, "modulemanage.html")
+
 
 
 def logout(request):
