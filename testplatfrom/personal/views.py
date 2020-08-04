@@ -2,6 +2,7 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from django.contrib import auth
+from personal.models.project import Project
 
 
 # Create your views here.
@@ -26,7 +27,8 @@ def index(request):
 
 @login_required
 def project_manage(request):
-    return render(request, "projectmanage.html")
+    project_all =Project.objects.all()
+    return render(request, "projectmanage.html",{"projects":project_all})
 
 
 @login_required
